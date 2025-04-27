@@ -1,0 +1,91 @@
+/* Reset and basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar using Flexbox */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 1rem;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  margin-left: 2rem;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero section */
+.hero {
+  background: #f4f4f4;
+  padding: 4rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+/* Grid layout */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background: #ddd;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .content-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .nav-links {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .content-grid {
+      grid-template-columns: 1fr;
+  }
+}
